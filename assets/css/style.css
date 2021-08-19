@@ -1,6 +1,7 @@
 body {
     font-family: 'Quicksand', sans-serif;
-    background-image: url("images/heroimage.jpg");
+    color: white;
+    background-image: url("/assets/images/heroimage.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
