@@ -1,0 +1,7 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-image: url("images/heroimage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
