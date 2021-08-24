@@ -32,5 +32,38 @@ ol {
     display: table;
     margin: 0 auto;
 }
-    
 
+
+div.col > img {
+    height: 150px;
+    width: 100px;
+    background-color:orange;
+    border: 2px solid white;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 2px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.game-area {
+    text-align: center;
+}
+
+.row {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.time-area {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.time-area > p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.nav-link {
+    color: rgba(0,0,0,.9)
+}
