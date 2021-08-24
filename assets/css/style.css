@@ -7,10 +7,30 @@ body {
     background-size: cover;
 }
 
+header {
+    text-align: center;
+    margin: 50px;
+}
 
- /*----------------------------------Contact-form-------------------------------*/
-    
+header > h4 {
+    margin: 50px;
+}
 
+.level-area {
+    text-align: center;
+}
 
+.btn-secondary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+ol {
+    background-color: white;
+    color: black;
+    display: table;
+    margin: 0 auto;
+}
     
 
