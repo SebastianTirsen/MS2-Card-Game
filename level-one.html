@@ -20,8 +20,8 @@
     <div class="main-container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <img src="/assets/images/logo.png" alt="dinopicture" style="height: 100px;">
-          <a class="navbar-brand" href="/index.html">Dino Memo</a>
+          <img src="assets/images/logo.png" alt="dinopicture" style="height: 100px;">
+          <a class="navbar-brand" href="index.html">Dino Memo</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -30,78 +30,89 @@
             </ul>
             <form class="d-flex">
               <button class="btn btn-outline-success" type="button">
-                <a class="nav-link active" aria-current="page" href="/index.html">New Game</a>
+                <a class="nav-link active" aria-current="page" href="index.html">New Game</a>
               </button>
               <button class="btn btn-outline-success" type="button">
-                <a class="nav-link" href="/rules.html">Rules</a>
+                <a class="nav-link" href="rules.html">Rules</a>
               </button>
               <button class="btn btn-outline-success" type="button">
-                <a class="nav-link" href="/contact.html">Contact</a>
+                <a class="nav-link" href="contact.html">Contact</a>
               </button>
             </form>
           </div>
         </div>
       </nav>
       <header>
-        <h1>Remember the Dinosaurs?</h1>
-        <h1>level One</h1>
-      </header>
-      <div class="game-area">
-        <div class="row">
-          <div class="col card-both">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
+      <h1>Remember the Dinosaurs?</h1>
+      <h1>level One</h1>
+      </header> 
+      <div class="game-area" id="game">
+        <div class="col cardWrap" data-dino="dino8">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino8.png" alt="Dinosaur">
         </div>
-        <div class="row">
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <<div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
+        <div class="col cardWrap" data-dino="dino8">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino8.png" alt="Dinosaur">
         </div>
-        <div class="row">
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
-          <div class="col">
-            <img class="card-front" src="/assets/images/trex.png" alt="Dinohead">
-            <img class="card-back" src="/assets/images/back-image.png" alt="Dinosaur">
-          </div>
+        <div class="col cardWrap same" data-dino="dino1">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino1.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap same" data-dino="dino1">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino1.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino2">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino2.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino2">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino2.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino3">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino3.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino3">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino3.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino4">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino4.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino4">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino4.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino5">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino5.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino5">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino5.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino6">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino6.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino6">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino6.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino7">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino7.png" alt="Dinosaur">
+        </div>
+        <div class="col cardWrap" data-dino="dino7">
+          <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
+          <img class="card-front" src="assets/images/Dino7.png" alt="Dinosaur">
         </div>
       </div>
+      <div class="copy"><Strong>Images &copy </Strong><a rel="license" href="https://freesvgdesigns.com" target="_blank">freesvgdesigns.com</a><Strong> & </Strong><a rel="license" href="https://pngwing.com" target="_blank">pngwing.com</a></div>
       <div class="time-area">
         <p>Time: 00:00</p>
         <button class="btn-lg">Start</button>
@@ -116,3 +127,21 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 </html>
+      
+      
+      
+      
+      
+      
+      <!-- <div class="time-area">
+        <div id="stopwatch">
+          00:00:00
+        </div>
+        <ul id="buttons">
+            <li><button class="btn btn-light" onclick="startTimer()">Start</button></li>
+            <li><button class="btn btn-light" onclick="stopTimer()">Stop</button></li>
+            <li><button class="btn btn-light" onclick="resetTimer()">Reset</button></li>
+        </ul>
+      </div>
+    </div>-->
+    
