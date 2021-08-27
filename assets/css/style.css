@@ -19,11 +19,16 @@ header > h4 {
     margin: 50px;
 }
 
+h2 {
+    text-align: center;
+}
+
 .level-area {
     text-align: center;
 }
 
 .btn-secondary {
+    background-color: orange;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 30px;
@@ -45,6 +50,16 @@ div.col > img {
     /* margin-top: 20px; */
     border-radius: 5px;
     box-shadow: 5px 2px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-send {
+    text-align: center;
+    margin-top: 30px;
 }
 
 .game-area {
@@ -133,3 +148,7 @@ div.col > img {
     color: rgba(0,0,0,.9)
 }
 
+/*Stopwatch*/
+#watch-time {
+    font-size: 1.85rem;
+}
