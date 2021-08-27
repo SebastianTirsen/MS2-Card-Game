@@ -57,20 +57,28 @@ div.col > img {
     justify-content: center;
 }
 
+.form-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.signup-form {
+    width: 25%;
+}
+
 .btn-send {
     text-align: center;
     margin-top: 30px;
 }
 
 .game-area {
-    
     width: 560px;
     height: 560px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    perspective: 1000px;
-   
+    perspective: 1000px;  
 }
 
 /* .game-area .card. {
@@ -114,9 +122,8 @@ div.col > img {
 }
 
 .card-back {
-  
+    backface-visibility: hidden;
     padding: 20px;
-
 }
 
 .card-front {
@@ -126,8 +133,6 @@ div.col > img {
 .copy {
     text-align: center; 
     margin: auto;
-    
-
 }
 .copy a {
     color: white;

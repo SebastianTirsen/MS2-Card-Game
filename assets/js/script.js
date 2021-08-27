@@ -69,7 +69,6 @@ function changeImages() {
   compareImages(); // och går vidare till jämförelsefunktionen 
 }
 
-
 /*Stopwatch*/
 var watch = {
   // (A) INITIALIZE
