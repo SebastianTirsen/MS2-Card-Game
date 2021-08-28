@@ -15,6 +15,16 @@
     <!--Own stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
+    <!--EmailJS-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_ALNHK7njtiPvm25qWOYGs");
+
+   })();
+</script>
 </head>
 <body>
   <div class="main-container">
@@ -47,29 +57,27 @@
       <h1>Contact</h1>
     </header>
     <section class="form-section">
-      <form action="https://formdump.codeinstitute.net/" method="POST" class="signup-form">
+      <form onsubmit="return sendMail(this);" class="signup-form">
           <h2>Send me your question!</h2>
           <div class="row mb-16">
               <div class="form-area">
-                  <input type="text" id="fname" class="form-control" name="first_name" placeholder="First name" required>
+                  <input type="text" id="fname" class="form-control" name="name" placeholder="Full Name" required>
               </div>
               <div class="form-area">
-                  <input type="text" id="lname" class="form-control" name="last_name" placeholder="Surname" required>
-              </div>
-              <div class="form-area">
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-              </div>
-             
+                <input type="email" class="form-control" id="InputEmail" name:"emailaddress" placeholder="Email" required>
+              </div> 
           <div class="form-group form-area">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="12" placeholder="Write comment / question / request here:"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" name="yourquestion" rows="12" placeholder="Write comment / question / request here:" required></textarea>
           </div>
           <div class="btn-send">
-              <input class="cta-button" type="submit" value="Send">
+              <button class="btn btn-secondary" type="submit" value="Send">Send Question</button>
             </div>
         </div> 
       </form>
   </section>    
   </div>
+  <!--EmailJS scriptfile-->
+  <script src="assets/js/sendEmail.js"></script>
     <!--Own scriptfile-->
     <script src="assets/js/script.js"></script>
     <!--Bootstrap-->

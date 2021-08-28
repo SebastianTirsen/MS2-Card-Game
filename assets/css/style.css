@@ -157,3 +157,12 @@ div.col > img {
 #watch-time {
     font-size: 1.85rem;
 }
+
+#watch-start {
+    background-color: orange;
+    border-color: white;
+}
+#watch-reset {
+    background-color: orange;
+    border-color: white;
+}
