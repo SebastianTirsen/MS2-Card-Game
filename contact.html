@@ -14,11 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <!--Own stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Dino Memo</title>
     <!--EmailJS-->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 </script>
+
 <script type="text/javascript">
    (function(){
       emailjs.init("user_ALNHK7njtiPvm25qWOYGs");
@@ -53,7 +54,6 @@
       </div>
     </nav>
     <header>
-      <h1>Remember the Dinosaurs?</h1>
       <h1>Contact</h1>
     </header>
     <section class="form-section">
@@ -64,13 +64,13 @@
                   <input type="text" id="fname" class="form-control" name="name" placeholder="Full Name" required>
               </div>
               <div class="form-area">
-                <input type="email" class="form-control" id="InputEmail" name:"emailaddress" placeholder="Email" required>
+                <input type="email" class="form-control" id="InputEmail" name="emailaddress" placeholder="Email" required>
               </div> 
           <div class="form-group form-area">
-              <textarea class="form-control" id="exampleFormControlTextarea1" name="yourquestion" rows="12" placeholder="Write comment / question / request here:" required></textarea>
+              <textarea class="form-control" id="questionField" name="yourquestion" rows="12" placeholder="Write comment / question / request here:"></textarea>
           </div>
           <div class="btn-send">
-              <button class="btn btn-secondary" type="submit" value="Send">Send Question</button>
+              <button class="btn btn-secondary" type="submit">Send Question</button>
             </div>
         </div> 
       </form>
