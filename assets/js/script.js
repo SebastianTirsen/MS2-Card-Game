@@ -1,7 +1,7 @@
 /*Game Area*/
 "use strict"; // Kontrollfunktion
 
-// Deklarerar och initierar variabler för användning nedan
+// Deklarerar och initierar letiabler för användning nedan
 let newImg = false;
 let freezeImg = false;
 let imgOne = null;
@@ -11,7 +11,7 @@ let imageArray = [];
 // Hämtar kort / bild objekten från DOM:en.
 const $$ = document.querySelectorAll.bind(document);
 
-// Blandar random korten / bilderna varje gång 
+// Blandar random korten / bilderna letje gång 
 (() => {
     $$(".cardWrap").forEach(img => {
       let mixedImages = Math.floor(Math.random() * 16);
@@ -19,16 +19,16 @@ const $$ = document.querySelectorAll.bind(document);
     });
 })();
 
-// Lägger på eventlyssnare på varje bild
+// Lägger på eventlyssnare på letje bild
 $$(".cardWrap").forEach(img => img.addEventListener('click', changeImages));
 
-// Denna återställer variablerna efter varje omgång
-const reAssignVariables = () => [imgOne, imgTwo, imageArray, newImg, freezeImg] = [null, null, null, false, false];
+// Denna återställer letiablerna efter letje omgång
+const reAssignletiables = () => [imgOne, imgTwo, imageArray, newImg, freezeImg] = [null, null, null, false, false];
 
 // Funktionen som startar och ser till så att korten inte vänds tillbaka, samt
 const freezeImages = () => {
     imageArray.forEach(img => img.removeEventListener("click", changeImages));
-    reAssignVariables();
+    reAssignletiables();
 }
 
 // Funktionen som vänder tillbaka korten fall det INTE är match.
@@ -36,7 +36,7 @@ const hideImages = () => {
     freezeImg = true;
     setTimeout(() => {
       imageArray.forEach(img => img.classList.remove("changeImg"));
-      reAssignVariables();
+      reAssignletiables();
     }, 500); // Här kan du kanske ställa in svårighetsgraden dvs hur länge man ser bilderna innan de vänds tillbaka.
 }
 
@@ -52,7 +52,7 @@ function changeImages() {
   this.classList.add("changeImg"); // Ändrar klassen till bytsida, som "vänder" kortet.
 
   if (!newImg) { // Om newImg är false / dvs not true - är kortet, det första som trycks på (av två, dvs ett par då), 
-    newImg = true; // och då sätts variablarna - så att detta if statement ej exekverar vid nästa bildtryck
+    newImg = true; // och då sätts letiablarna - så att detta if statement ej exekverar vid nästa bildtryck
     imgOne = this;
     // console.log(this);
     return; // och man går ur loopen.
@@ -63,7 +63,7 @@ function changeImages() {
 }
 
 /*Stopwatch*/
-var watch = {
+let watch = {
   etime : null, // HTML time display
   erst : null, // HTML reset button
   ego : null, // HTML start/stop button
@@ -83,12 +83,12 @@ var watch = {
   tick : function () {
   
     watch.now++;
-    var remain = watch.now;
-    var hours = Math.floor(remain / 3600);
+    let remain = watch.now;
+    let hours = Math.floor(remain / 3600);
     remain -= hours * 3600;
-    var mins = Math.floor(remain / 60);
+    let mins = Math.floor(remain / 60);
     remain -= mins * 60;
-    var secs = remain;
+    let secs = remain;
 
     if (hours<10) { hours = "0" + hours; }
     if (mins<10) { mins = "0" + mins; }

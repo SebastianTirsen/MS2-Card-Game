@@ -57,7 +57,7 @@
       <h1>Contact</h1>
     </header>
     <section class="form-section">
-      <form onsubmit="return sendMail(this);" class="signup-form">
+      <form onsubmit="return sendMail(this);" class="signup-form" id="signup">
           <h2>Send me your question!</h2>
           <div class="row mb-16">
               <div class="form-area">
@@ -67,7 +67,7 @@
                 <input type="email" class="form-control" id="InputEmail" name="emailaddress" placeholder="Email" required>
               </div> 
           <div class="form-group form-area">
-              <textarea class="form-control" id="questionField" name="yourquestion" rows="12" placeholder="Write comment / question / request here:"></textarea>
+              <textarea class="form-control" id="questionField" name="yourquestion" rows="12" placeholder="Write comment / question / request here:" required></textarea>
           </div>
           <div class="btn-send">
               <button class="btn btn-secondary" type="submit">Send Question</button>
@@ -76,6 +76,23 @@
       </form>
   </section>    
   </div>
+  <footer>
+  <div class="footer-container">
+    <div class="description">
+        <p>Dino Memo is a memory training game with three levels for your to enjoy!</p>
+    </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-contact">
+        <div>Ringtrastvägen 36</div>
+        <div id="postcode">352 42 Växjö</div>
+        <div id="country">SWEDEN</div>
+    </div>
+</div>
+</footer>
   <!--EmailJS scriptfile-->
   <script src="assets/js/sendEmail.js"></script>
     <!--Own scriptfile-->
