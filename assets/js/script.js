@@ -1,3 +1,4 @@
+/*Game Area*/
 "use strict"; // Kontrollfunktion
 
 // Deklarerar och initierar variabler för användning nedan
@@ -7,10 +8,8 @@ let imgOne = null;
 let imgTwo = null;
 let imageArray = [];
 
-
 // Hämtar kort / bild objekten från DOM:en.
 const $$ = document.querySelectorAll.bind(document);
-
 
 // Blandar random korten / bilderna varje gång 
 (() => {
@@ -20,21 +19,17 @@ const $$ = document.querySelectorAll.bind(document);
     });
 })();
 
-
 // Lägger på eventlyssnare på varje bild
 $$(".cardWrap").forEach(img => img.addEventListener('click', changeImages));
 
-
 // Denna återställer variablerna efter varje omgång
 const reAssignVariables = () => [imgOne, imgTwo, imageArray, newImg, freezeImg] = [null, null, null, false, false];
-   
 
 // Funktionen som startar och ser till så att korten inte vänds tillbaka, samt
 const freezeImages = () => {
     imageArray.forEach(img => img.removeEventListener("click", changeImages));
     reAssignVariables();
 }
-
 
 // Funktionen som vänder tillbaka korten fall det INTE är match.
 const hideImages = () => {
@@ -45,10 +40,8 @@ const hideImages = () => {
     }, 500); // Här kan du kanske ställa in svårighetsgraden dvs hur länge man ser bilderna innan de vänds tillbaka.
 }
 
-
 // som väljer ny funktion utifrån satta data-* attribut i index.html (data-dino="dino8") // är båda tex dino8 är det samma då da...
 const compareImages = () => imgOne.dataset.dino === imgTwo.dataset.dino ? freezeImages() : hideImages();
-
 
 // Funktionen som byter sida på korten
 function changeImages() {
@@ -71,28 +64,24 @@ function changeImages() {
 
 /*Stopwatch*/
 var watch = {
-  // (A) INITIALIZE
   etime : null, // HTML time display
   erst : null, // HTML reset button
   ego : null, // HTML start/stop button
   init : function () {
-    // (A1) GET HTML ELEMENTS
     watch.etime = document.getElementById("watch-time");
     watch.erst = document.getElementById("watch-reset");
     watch.ego = document.getElementById("watch-start");
 
-    // (A2) ENABLE BUTTON CONTROLS
     watch.erst.addEventListener("click", watch.reset);
     watch.erst.disabled = false;
     watch.ego.addEventListener("click", watch.start);
     watch.ego.disabled = false;
   },
 
-  // (B) TIMER ACTION
   timer : null, // timer object
   now : 0, // current elapsed time
   tick : function () {
-    // (B1) CALCULATE HOURS, MINS, SECONDS
+  
     watch.now++;
     var remain = watch.now;
     var hours = Math.floor(remain / 3600);
@@ -101,14 +90,12 @@ var watch = {
     remain -= mins * 60;
     var secs = remain;
 
-    // (B2) UPDATE THE DISPLAY TIMER
     if (hours<10) { hours = "0" + hours; }
     if (mins<10) { mins = "0" + mins; }
     if (secs<10) { secs = "0" + secs; }
     watch.etime.innerHTML = hours + ":" + mins + ":" + secs;
   },
   
-  // (C) START!
   start : function () {
     watch.timer = setInterval(watch.tick, 1000);
     watch.ego.value = "Stop";
@@ -116,7 +103,6 @@ var watch = {
     watch.ego.addEventListener("click", watch.stop);
   },
 
-  // (D) STOP
   stop  : function () {
     clearInterval(watch.timer);
     watch.timer = null;
@@ -125,7 +111,6 @@ var watch = {
     watch.ego.addEventListener("click", watch.start);
   },
 
-  // (E) RESET
   reset : function () {
     if (watch.timer != null) { watch.stop(); }
     watch.now = -1;
