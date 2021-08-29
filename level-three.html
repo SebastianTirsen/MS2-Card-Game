@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,15 @@
       <header>
         <h1>Level Three</h1>
       </header>
-      
+      <div class="time-area">
+        <div id="stopwatch">
+          <div id="watch-time">00:00:00</div>
+          <div class="button-area">
+          <input type="button" value="Start" id="watch-start" disabled>
+          <input type="button" value="Reset" id="watch-reset" disabled>
+        </div>
+        </div>
+      </div>  
     <div class="game-area" id="game">
       <div class="col cardWrap" data-dino="dino8">
         <img class="card-back" src="assets/images/trex.png" alt="Dinohead">
@@ -128,17 +136,6 @@
         <img class="card-front" src="assets/images/Dino10.png" alt="Dinosaur">
       </div>
     </div>
-    <div class="time-area" id="time-area-three">
-        <div id="stopwatch">
-          <!-- CURRENT TIME -->
-          <div id="watch-time">00:00:00</div>
-          <!-- CONTROLS -->
-          <div class="button-area">
-          <input type="button" value="Start" id="watch-start" disabled>
-          <input type="button" value="Reset" id="watch-reset" disabled>
-        </div>
-        </div>
-      </div> 
     </div>
     <!--Own scriptfile-->
     <script src="assets/js/script.js"></script>
