@@ -1,17 +1,19 @@
-/*Game Area*/
-"use strict"; // Kontrollfunktion
+/*****Game Area*****/
 
-// Deklarerar och initierar letiabler för användning nedan
+// Controlfunction
+"use strict"; 
+
+// Declares and initiates variables
 let newImg = false;
 let freezeImg = false;
 let imgOne = null;
 let imgTwo = null;
 let imageArray = [];
 
-// Hämtar kort / bild objekten från DOM:en.
+// Gets cards / image objects from the DOM
 const $$ = document.querySelectorAll.bind(document);
 
-// Blandar random korten / bilderna letje gång 
+// Shuffles cards / images every round
 (() => {
     $$(".cardWrap").forEach(img => {
       let mixedImages = Math.floor(Math.random() * 16);
@@ -19,50 +21,50 @@ const $$ = document.querySelectorAll.bind(document);
     });
 })();
 
-// Lägger på eventlyssnare på letje bild
+// Applies eventlisteners on every image
 $$(".cardWrap").forEach(img => img.addEventListener('click', changeImages));
 
-// Denna återställer letiablerna efter letje omgång
-const reAssignletiables = () => [imgOne, imgTwo, imageArray, newImg, freezeImg] = [null, null, null, false, false];
+// Resets varibles after every round
+const reAssignVariables = () => [imgOne, imgTwo, imageArray, newImg, freezeImg] = [null, null, null, false, false];
 
-// Funktionen som startar och ser till så att korten inte vänds tillbaka, samt
+// Function that starts and makes sure the cards doesnt flip back over
 const freezeImages = () => {
     imageArray.forEach(img => img.removeEventListener("click", changeImages));
-    reAssignletiables();
+    reAssignVariables();
 }
 
-// Funktionen som vänder tillbaka korten fall det INTE är match.
+// Function that turns the cards back again if they dont match
 const hideImages = () => {
     freezeImg = true;
     setTimeout(() => {
       imageArray.forEach(img => img.classList.remove("changeImg"));
-      reAssignletiables();
-    }, 500); // Här kan du kanske ställa in svårighetsgraden dvs hur länge man ser bilderna innan de vänds tillbaka.
+      reAssignVariables();
+    }, 1000); // how long the cards front side is showing before turning back again
 }
 
-// som väljer ny funktion utifrån satta data-* attribut i index.html (data-dino="dino8") // är båda tex dino8 är det samma då da...
+// Chooses new function from stated data-* attribute in index.html (data-dino="dino8") // if both are for example dino8 they make a pair
 const compareImages = () => imgOne.dataset.dino === imgTwo.dataset.dino ? freezeImages() : hideImages();
 
-// Funktionen som byter sida på korten
+// Function that turns the cards
 function changeImages() {
-  if ( freezeImg || this === imgOne ){ // Fall denna sats är sann, dvs att freezeImg === true, måste man vänta en stund innan man kan trycka på ett till kort.
-    return; // Förhindrar att eventlyssnaren försvinner då det gick att klicka två gånger fort på samma kort. Det hänger sig då.
+  if ( freezeImg || this === imgOne ){ // If this sentence is true, ie that freezeImg === true, you have to wait before clicking the next card
+    return; // Prevents the eventlistener from dropping out when it was not possible to click two times fast on the same card
   }
 
-  this.classList.add("changeImg"); // Ändrar klassen till bytsida, som "vänder" kortet.
+  this.classList.add("changeImg"); // Changes class to ChangeImg, that turns the cards
 
-  if (!newImg) { // Om newImg är false / dvs not true - är kortet, det första som trycks på (av två, dvs ett par då), 
-    newImg = true; // och då sätts letiablarna - så att detta if statement ej exekverar vid nästa bildtryck
+  if (!newImg) { // If newImg is false / not true - the card is the first to be clicked of the two, and makes a pair 
+    newImg = true; // and then the variables are set - so that this if-statement does not execute when the next card is clicked
     imgOne = this;
     // console.log(this);
-    return; // och man går ur loopen.
+    return; // and you exit the loop
   }
-  imgTwo = this; // Hit kommer man fall det är andra kortet / bilden man trycker på.
+  imgTwo = this; // Invokes when you click the second card
   imageArray = [imgOne, imgTwo]; // instansierar 7 lägger till de två bilderna i arrayen. (Om man i framtiden vill ha flera bilder)
-  compareImages(); // och går vidare till jämförelsefunktionen 
+  compareImages(); // and moves to the function for comparison 
 }
 
-/*Stopwatch*/
+/*****Time Area*****/
 let watch = {
   etime : null, // HTML time display
   erst : null, // HTML reset button
