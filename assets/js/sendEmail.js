@@ -15,3 +15,7 @@ function sendMail(contactForm) {
     )
     return false;
 }
+
+function change() {
+    document.getElementById("send-button").innerHTML = "MESSAGE SENT!!!!";
+}
