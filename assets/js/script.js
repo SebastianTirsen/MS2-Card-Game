@@ -1,3 +1,61 @@
+/*****Time Area*****/
+
+let watch = {
+  etime : null, // HTML time display
+  erst : null, // HTML reset button
+  ego : null, // HTML start/stop button
+  init : function () {
+    watch.etime = document.getElementById("watch-time");
+    watch.erst = document.getElementById("watch-reset");
+    watch.ego = document.getElementById("watch-start");
+
+    watch.erst.addEventListener("click", watch.reset);
+    watch.erst.disabled = false;
+    watch.ego.addEventListener("click", watch.start);
+    watch.ego.disabled = false;
+  },
+
+  timer : null, // timer object
+  now : 0, // current elapsed time
+  tick : function () {
+  
+    watch.now++;
+    let remain = watch.now;
+    let hours = Math.floor(remain / 3600);
+    remain -= hours * 3600;
+    let mins = Math.floor(remain / 60);
+    remain -= mins * 60;
+    let secs = remain;
+
+    if (hours<10) { hours = "0" + hours; }
+    if (mins<10) { mins = "0" + mins; }
+    if (secs<10) { secs = "0" + secs; }
+    watch.etime.innerHTML = hours + ":" + mins + ":" + secs;
+  },
+  
+  start : function () {
+    watch.timer = setInterval(watch.tick, 1000);
+    watch.ego.value = "Stop";
+    watch.ego.removeEventListener("click", watch.start);
+    watch.ego.addEventListener("click", watch.stop);
+  },
+
+  stop  : function () {
+    clearInterval(watch.timer);
+    watch.timer = null;
+    watch.ego.value = "Start";
+    watch.ego.removeEventListener("click", watch.stop);
+    watch.ego.addEventListener("click", watch.start);
+  },
+
+  reset : function () {
+    if (watch.timer != null) { watch.stop(); }
+    watch.now = -1;
+    watch.tick();
+  }
+};
+window.addEventListener("load", watch.init);
+
 /*****Game Area*****/
 
 // Controlfunction
@@ -63,60 +121,3 @@ function changeImages() {
   imageArray = [imgOne, imgTwo]; // instansierar 7 lägger till de två bilderna i arrayen. (Om man i framtiden vill ha flera bilder)
   compareImages(); // and moves to the function for comparison 
 }
-
-/*****Time Area*****/
-let watch = {
-  etime : null, // HTML time display
-  erst : null, // HTML reset button
-  ego : null, // HTML start/stop button
-  init : function () {
-    watch.etime = document.getElementById("watch-time");
-    watch.erst = document.getElementById("watch-reset");
-    watch.ego = document.getElementById("watch-start");
-
-    watch.erst.addEventListener("click", watch.reset);
-    watch.erst.disabled = false;
-    watch.ego.addEventListener("click", watch.start);
-    watch.ego.disabled = false;
-  },
-
-  timer : null, // timer object
-  now : 0, // current elapsed time
-  tick : function () {
-  
-    watch.now++;
-    let remain = watch.now;
-    let hours = Math.floor(remain / 3600);
-    remain -= hours * 3600;
-    let mins = Math.floor(remain / 60);
-    remain -= mins * 60;
-    let secs = remain;
-
-    if (hours<10) { hours = "0" + hours; }
-    if (mins<10) { mins = "0" + mins; }
-    if (secs<10) { secs = "0" + secs; }
-    watch.etime.innerHTML = hours + ":" + mins + ":" + secs;
-  },
-  
-  start : function () {
-    watch.timer = setInterval(watch.tick, 1000);
-    watch.ego.value = "Stop";
-    watch.ego.removeEventListener("click", watch.start);
-    watch.ego.addEventListener("click", watch.stop);
-  },
-
-  stop  : function () {
-    clearInterval(watch.timer);
-    watch.timer = null;
-    watch.ego.value = "Start";
-    watch.ego.removeEventListener("click", watch.stop);
-    watch.ego.addEventListener("click", watch.start);
-  },
-
-  reset : function () {
-    if (watch.timer != null) { watch.stop(); }
-    watch.now = -1;
-    watch.tick();
-  }
-};
-window.addEventListener("load", watch.init);
