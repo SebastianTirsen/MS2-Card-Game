@@ -1,5 +1,5 @@
 /*****Time Area*****/
-
+let firstCard = 0;
 let watch = {
     etime : null, // HTML time display
     ereset : null, // HTML reset button
@@ -11,7 +11,7 @@ let watch = {
   
       watch.ereset.addEventListener("click", watch.reset);
       watch.ereset.disabled = false;
-      watch.estart.addEventListener("click", watch.start);
+      //watch.estart.addEventListener("click", watch.start);
       watch.estart.disabled = false;
     },
   
@@ -21,20 +21,20 @@ let watch = {
   
       watch.now++;
       let remain = watch.now;
-      let hours = Math.floor(remain / 3600);
-      remain -= hours * 3600;
-      let mins = Math.floor(remain / 60);
-      remain -= mins * 60;
-      let secs = remain;
+      let mins = Math.floor(remain / 6000);
+      remain -= mins * 6000;
+      let secs = Math.floor(remain / 100);
+      remain -= secs * 100;
+      let hundreds = remain;
   
-      if (hours<10) { hours = "0" + hours; }
       if (mins<10) { mins = "0" + mins; }
       if (secs<10) { secs = "0" + secs; }
-      watch.etime.innerHTML = hours + ":" + mins + ":" + secs;
+      if (hundreds<10) { hundreds = "0" + hundreds; }
+      watch.etime.innerHTML = mins + ":" + secs + ":" + hundreds;
     },
     
     start : function () {
-      watch.timer = setInterval(watch.tick, 1000);
+      watch.timer = setInterval(watch.tick, 10);
       watch.estart.value = "Stop";
       watch.estart.removeEventListener("click", watch.start);
       watch.estart.addEventListener("click", watch.stop);
@@ -82,7 +82,7 @@ let watch = {
   // Applies eventlisteners on every image
   $$(".cardWrap").forEach(img => img.addEventListener('click', changeImages));
   
-  // Resets varibles after every round
+  // Resets variables after every round
   const reAssignVariables = () => [imgOne, imgTwo, imageArray, newImg, freezeImg] = [null, null, null, false, false];
   
   // Function that starts and makes sure the cards doesnt flip back over
@@ -105,6 +105,10 @@ let watch = {
   
   // Function that turns the cards
   function changeImages() {
+    firstCard += 1;
+    if (firstCard === 1) {
+      watch.start();
+    }
     if ( freezeImg || this === imgOne ){ // If this sentence is true, ie that freezeImg === true, you have to wait before clicking the next card
       return; // Prevents the eventlistener from dropping out when it was not possible to click two times fast on the same card
     }
@@ -118,7 +122,7 @@ let watch = {
       return; // and you exit the loop
     }
     imgTwo = this; // Invokes when you click the second card
-    imageArray = [imgOne, imgTwo]; // instansierar 7 lägger till de två bilderna i arrayen. (Om man i framtiden vill ha flera bilder)
+    imageArray = [imgOne, imgTwo]; // Assigns images to array
     compareImages(); // and moves to the function for comparison 
   }
 
