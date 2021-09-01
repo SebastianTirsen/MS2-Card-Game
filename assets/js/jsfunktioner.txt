@@ -1,0 +1,5 @@
+starta spelet genom att klicka på ett av korten. Då startar klockan. KLART
+När jag har vunnit, då kommer en modal upp med ett budskap om att jag vunnit och tiden och antal clickade kort.
+I modalen skall man få välja på att spela igen eller gå tillbaka till förstasidan.
+när man klickar på spela igen så vänds alla korten tillbaka och shufflas.
+och klockan nollställs.

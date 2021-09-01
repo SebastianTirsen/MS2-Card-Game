@@ -1,22 +1,22 @@
 /*****Time Area*****/
 let firstCard = 0;
 let watch = {
-    etime : null, // HTML time display
-    ereset : null, // HTML reset button
-    estart : null, // HTML start/stop button
+    etime : null, 
+    ereset : null, 
+    estart : null, 
     init : function () {
       watch.etime = document.getElementById("watch-time");
       watch.ereset = document.getElementById("watch-reset");
-      watch.estart = document.getElementById("watch-start");
+      //watch.estart = document.getElementById("watch-start");
   
       watch.ereset.addEventListener("click", watch.reset);
       watch.ereset.disabled = false;
       //watch.estart.addEventListener("click", watch.start);
-      watch.estart.disabled = false;
+      //watch.estart.disabled = false;
     },
   
-    timer : null, // timer object
-    now : 0, // current elapsed time
+    timer : null, 
+    now : 0, 
     tick : function () {
   
       watch.now++;
@@ -35,17 +35,21 @@ let watch = {
     
     start : function () {
       watch.timer = setInterval(watch.tick, 10);
-      watch.estart.value = "Stop";
-      watch.estart.removeEventListener("click", watch.start);
-      watch.estart.addEventListener("click", watch.stop);
+      //watch.ereset.value = "Stop";
+      //watch.estart.removeEventListener("click", watch.start);
+      //watch.estart.addEventListener("click", watch.stop);
+      watch.ereset.removeEventListener("click", watch.start);
+      watch.ereset.addEventListener("click", watch.stop);
     },
   
     stop  : function () {
       clearInterval(watch.timer);
       watch.timer = null;
-      watch.estart.value = "Start";
-      watch.estart.removeEventListener("click", watch.stop);
-      watch.estart.addEventListener("click", watch.start);
+      //watch.ereset.value = "Reset";
+      //watch.estart.removeEventListener("click", watch.stop);
+      //watch.estart.addEventListener("click", watch.start);
+      watch.ereset.removeEventListener("click", watch.stop);
+      //watch.ereset.addEventListener("click", watch.start);
     },
   
     reset : function () {
@@ -103,7 +107,7 @@ let watch = {
   // Chooses new function from stated data-* attribute in index.html (data-dino="dino8") // if both are for example dino8 they make a pair
   const compareImages = () => imgOne.dataset.dino === imgTwo.dataset.dino ? freezeImages() : hideImages();
   
-  // Function that turns the cards
+  // Function that turns the cards and starts the timer.
   function changeImages() {
     firstCard += 1;
     if (firstCard === 1) {
