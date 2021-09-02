@@ -96,6 +96,7 @@ let watch = {
       imageArray.forEach(img => img.removeEventListener("click", changeImages));
       if (gameOver === 6) {
         watch.stop();
+        location.reload();
       }
       reAssignVariables();
   }
