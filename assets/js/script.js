@@ -70,6 +70,7 @@ let watch = {
   let freezeImg = false;
   let imgOne = null;
   let imgTwo = null;
+  let gameOver = 0;
   let imageArray = [];
   
   // Gets cards / image objects from the DOM
@@ -91,7 +92,11 @@ let watch = {
   
   // Function that starts and makes sure the cards doesnt flip back over
   const freezeImages = () => {
+      gameOver += 1;
       imageArray.forEach(img => img.removeEventListener("click", changeImages));
+      if (gameOver === 6) {
+        watch.stop();
+      }
       reAssignVariables();
   }
   
