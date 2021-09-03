@@ -50,7 +50,7 @@
           <div id="watch-time">00:00:00</div>
           <div class="button-area">
             <!--<input type="button" value="Start" id="watch-start" disabled>-->
-            <input type="button" value="Reset" id="watch-reset" disabled>
+            <input type="button" value="Reset" id="watch-reset" onclick="location.reload()" disabled>
           </div>
         </div>
       </div>     
@@ -106,6 +106,31 @@
     </div>
 
     </div>
+
+<!-- Modal -->
+<div id="popup1" class="overlay">
+  <div class="popup">
+      <h2>Congratulations<img src="assets/images/fire.png" id="firew"></h2>
+      <a class="close" href=# >×</a>
+      <div class="content-1">
+          Congratulations! You matched all the cards!
+      </div>
+      <div class="content-2">
+          <p>You made <span id=finalMove> </span> moves </p>
+          <p>in <span id=totalTime> </span> </p>
+          <p>Rating:  <span id=starRating></span></p>
+      </div>
+      <button id="play-again"onclick="location.reload()">
+          Play again? </a>
+      </button>
+      <button id="play-again" "onclick="">
+        Change Level </a>
+    </button>
+  </div>
+</div>
+
+</div>
+
     <!--Own scriptfile-->
     <script src="assets/js/script.js"></script>
     <!--Bootstrap-->

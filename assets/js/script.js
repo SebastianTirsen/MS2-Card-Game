@@ -8,7 +8,6 @@ let watch = {
       watch.etime = document.getElementById("watch-time");
       watch.ereset = document.getElementById("watch-reset");
       //watch.estart = document.getElementById("watch-start");
-  
       watch.ereset.addEventListener("click", watch.reset);
       watch.ereset.disabled = false;
       //watch.estart.addEventListener("click", watch.start);
@@ -72,6 +71,7 @@ let watch = {
   let imgTwo = null;
   let gameOver = 0;
   let imageArray = [];
+  let modal = document.getElementById("popup1")
   
   // Gets cards / image objects from the DOM
   const $$ = document.querySelectorAll.bind(document);
@@ -96,7 +96,7 @@ let watch = {
       imageArray.forEach(img => img.removeEventListener("click", changeImages));
       if (gameOver === 6) {
         watch.stop();
-        location.reload();
+        modal.classList.add("show");
       }
       reAssignVariables();
   }
@@ -135,4 +135,3 @@ let watch = {
     imageArray = [imgOne, imgTwo]; // Assigns images to array
     compareImages(); // and moves to the function for comparison 
   }
-

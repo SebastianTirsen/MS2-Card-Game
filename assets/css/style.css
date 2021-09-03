@@ -52,6 +52,8 @@ div.col > img {
     box-shadow: 5px 2px 20px 0 rgba(255, 255, 255, 0.5);
 }
 
+/*****Form*****/
+
 .form-section {
     display: flex;
     justify-content: center;
@@ -71,6 +73,8 @@ div.col > img {
     text-align: center;
     margin-top: 30px;
 }
+
+/*****Game Area*****/
 
 .game-area {
     width: 560px;
@@ -167,7 +171,8 @@ div.col > img {
     color: rgba(0,0,0,.9)
 }
 
-/*Stopwatch*/
+/*****Timer*****/
+
 #watch-time {
     font-size: 2.2rem;
 }
@@ -183,9 +188,10 @@ div.col > img {
     border-color: white;
     font-size: 20px;
     cursor: pointer;
+    display: none;
 }
 
-/*----------------------------------Footer-------------------------------*/
+/*****Footer*****/
 
 .fot-contact {
     margin: 4% 0 auto;
@@ -239,4 +245,88 @@ text-align: right;
 }
 #country {
     margin-right: 40px;
+}
+
+/*****Modal*****/
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.popup {
+	margin: 200px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 50%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: 'Quicksand', sans-serif;
+}
+  
+.popup h2 {
+	margin-top: 50px;
+	color: #333;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+#starRating li {
+	display: inline-block;
+}
+
+#play-again {
+	background-color:orange;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+	width: 30%;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	border-radius: 5px;
+}
+
+#firew {
+    width: 300px;
+    height: 300px;
 }
