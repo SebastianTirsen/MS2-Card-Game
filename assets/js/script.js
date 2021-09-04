@@ -1,5 +1,6 @@
-/*****Time Area*****/
+/*****Timer*****/
 let firstCard = 0;
+let finalTime = 0;
 let watch = {
     etime : null, 
     ereset : null, 
@@ -96,6 +97,8 @@ let watch = {
       imageArray.forEach(img => img.removeEventListener("click", changeImages));
       if (gameOver === 6) {
         watch.stop();
+        finalTime = watch.etime;
+        document.getElementById("showTime").appendChild(watch.etime);
         modal.classList.add("show");
       }
       reAssignVariables();

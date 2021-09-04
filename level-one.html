@@ -45,6 +45,7 @@
       <header>
         <h1>Level One</h1>
       </header>
+      <!--Timer-->
       <div class="time-area">
         <div id="stopwatch">
           <div id="watch-time">00:00:00</div>
@@ -53,8 +54,9 @@
             <input type="button" value="Reset" id="watch-reset" onclick="location.reload()" disabled>
           </div>
         </div>
-      </div>     
-    <div class="game-area-one" id="game">
+      </div>
+      <!--Game area-->   
+      <div class="game-area-one" id="game">
       <div class="col cardWrap" data-dino="dino8">
         <img class="card-back" src="assets/images/Dinoback.png" alt="Dinohead">
         <img class="card-front" src="assets/images/Dino8.png" alt="Dinosaur">
@@ -103,34 +105,28 @@
         <img class="card-back" src="assets/images/Dinoback.png" alt="Dinohead">
         <img class="card-front" src="assets/images/Dino5.png" alt="Dinosaur">
       </div>
+      </div>
     </div>
-
-    </div>
-
 <!-- Modal -->
 <div id="popup1" class="overlay">
   <div class="popup">
       <h2>Congratulations<img src="assets/images/fire.png" id="firew"></h2>
-      <a class="close" href=# >×</a>
+      
       <div class="content-1">
           Congratulations! You matched all the cards!
       </div>
-      <div class="content-2">
-          <p>You made <span id=finalMove> </span> moves </p>
-          <p>in <span id=totalTime> </span> </p>
-          <p>Rating:  <span id=starRating></span></p>
+      <div id="showTime" class="content-2">
+
       </div>
       <button id="play-again"onclick="location.reload()">
           Play again? </a>
       </button>
       <button id="play-again" "onclick="">
-        Change Level </a>
+        <a href="index.html">Change Level </a>
     </button>
   </div>
 </div>
-
 </div>
-
     <!--Own scriptfile-->
     <script src="assets/js/script.js"></script>
     <!--Bootstrap-->

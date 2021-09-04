@@ -3,3 +3,11 @@ När jag har vunnit, då kommer en modal upp med ett budskap om att jag vunnit o
 I modalen skall man få välja på att spela igen eller gå tillbaka till förstasidan.
 när man klickar på spela igen så vänds alla korten tillbaka och shufflas.
 och klockan nollställs.
+
+Övrigt
+Lägga footern längst ner, samma på alla sidor.
+Lägga till funktionalitet på level 2 och 3.
+Ta bort startknappen på level 2 och 3.
+Trycka ner regeltexten längre ner på sidan.
+Addera anpassning till platta och mobil storlek.
+
