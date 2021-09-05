@@ -16,7 +16,7 @@ header {
 }
 
 header > h4 {
-    margin: 50px;
+    margin: 34px;
 }
 
 h2 {
@@ -175,7 +175,13 @@ div.col > img {
 
 #watch-time {
     font-size: 2.2rem;
-    color: #ff00ff;
+    height: 54px;
+    width: 158px;
+    background-color: white;
+    display: inline-block;
+    color: black;
+    border-radius: 5px;
+
 }
 
 #watch-start {
@@ -304,6 +310,8 @@ text-align: right;
 	max-height: 30%;
 	overflow: auto;
 	text-align: center;
+    color: black;
+    font-size: 22px;
 }
 
 .show {
@@ -333,4 +341,5 @@ text-align: right;
 }
 #play-again > a {
     text-decoration: none;
+    color: white;
 }
