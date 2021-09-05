@@ -1,23 +1,23 @@
+"use strict"; 
 /*****Timer*****/
+  // Declares and initiates variables
 let firstCard = 0;
 let finalTime = 0;
+//Declares object
 let watch = {
-    etime : null, 
-    ereset : null, 
-    estart : null, 
-    init : function () {
-      watch.etime = document.getElementById("watch-time");
-      watch.ereset = document.getElementById("watch-reset");
-      //watch.estart = document.getElementById("watch-start");
-      watch.ereset.addEventListener("click", watch.reset);
-      watch.ereset.disabled = false;
-      //watch.estart.addEventListener("click", watch.start);
-      //watch.estart.disabled = false;
+    clocktime: null, 
+    clockreset: null, 
+    clockstart: null,
+  
+    //Starts the timer 
+    init: function () {
+      watch.clocktime = document.getElementById("watch-time");
+      watch.clockreset = document.getElementById("watch-reset");
     },
   
-    timer : null, 
-    now : 0, 
-    tick : function () {
+    timer: null, 
+    now: 0, 
+    tick: function () {
   
       watch.now++;
       let remain = watch.now;
@@ -27,32 +27,25 @@ let watch = {
       remain -= secs * 100;
       let hundreds = remain;
   
-      if (mins<10) { mins = "0" + mins; }
-      if (secs<10) { secs = "0" + secs; }
-      if (hundreds<10) { hundreds = "0" + hundreds; }
-      watch.etime.innerHTML = mins + ":" + secs + ":" + hundreds;
+      if ( mins < 10 ) { mins = "0" + mins; }
+      if ( secs < 10 ) { secs = "0" + secs; }
+      if ( hundreds < 10 ) { hundreds = "0" + hundreds; }
+      watch.clocktime.innerHTML = mins + ":" + secs + ":" + hundreds;
     },
     
-    start : function () {
+    start: function () {
       watch.timer = setInterval(watch.tick, 10);
-      //watch.ereset.value = "Stop";
-      //watch.estart.removeEventListener("click", watch.start);
-      //watch.estart.addEventListener("click", watch.stop);
-      watch.ereset.removeEventListener("click", watch.start);
-      watch.ereset.addEventListener("click", watch.stop);
+      watch.clockreset.removeEventListener("click", watch.start);
+      watch.clockreset.addEventListener("click", watch.stop);
     },
   
-    stop  : function () {
+    stop: function () {
       clearInterval(watch.timer);
       watch.timer = null;
-      //watch.ereset.value = "Reset";
-      //watch.estart.removeEventListener("click", watch.stop);
-      //watch.estart.addEventListener("click", watch.start);
-      watch.ereset.removeEventListener("click", watch.stop);
-      //watch.ereset.addEventListener("click", watch.start);
+      watch.clockreset.removeEventListener("click", watch.stop);
     },
   
-    reset : function () {
+    reset: function () {
       if (watch.timer != null) { watch.stop(); }
       watch.now = -1;
       watch.tick();
@@ -61,10 +54,6 @@ let watch = {
   window.addEventListener("load", watch.init);
   
   /*****Game Area*****/
-  
-  // Controlfunction
-  "use strict"; 
-  
   // Declares and initiates variables
   let newImg = false;
   let freezeImg = false;
@@ -76,6 +65,7 @@ let watch = {
   
   // Gets cards / image objects from the DOM
   const $$ = document.querySelectorAll.bind(document);
+  let level = document.getElementsByClassName('cardWrap').length / 2;
   
   // Shuffles cards / images every round
   (() => {
@@ -95,10 +85,9 @@ let watch = {
   const freezeImages = () => {
       gameOver += 1;
       imageArray.forEach(img => img.removeEventListener("click", changeImages));
-      if (gameOver === 6) {
+      if (gameOver === level) {
         watch.stop();
-        finalTime = watch.etime;
-        document.getElementById("showTime").appendChild(watch.etime);
+        document.getElementById("showTime").appendChild(watch.clocktime);
         modal.classList.add("show");
       }
       reAssignVariables();

@@ -7,7 +7,6 @@ och klockan nollställs.
 Övrigt
 Lägga footern längst ner, samma på alla sidor.
 Lägga till funktionalitet på level 2 och 3.
-Ta bort startknappen på level 2 och 3.
 Trycka ner regeltexten längre ner på sidan.
 Addera anpassning till platta och mobil storlek.
 
