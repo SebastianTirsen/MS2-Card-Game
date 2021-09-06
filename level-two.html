@@ -18,43 +18,43 @@
     <title>Dino Memo</title>
 </head>
 <body>
-    <div class="main-container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <img src="assets/images/logo.png" alt="dinopicture" style="height: 100px;">
-          <a class="navbar-brand" href="index.html">Dino Memo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-            <form class="d-flex">
-              <button class="btn btn-outline-success" type="button">
-                <a class="nav-link active" aria-current="page" href="index.html">New Game</a>
-              </button>
-              <button class="btn btn-outline-success" type="button">
-                <a class="nav-link" href="rules.html">Rules</a>
-              </button>
-              <button class="btn btn-outline-success" type="button">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </button>
-            </form>
-          </div>
+  <div class="main-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img src="assets/images/logo.png" alt="dinopicture" style="height: 100px;">
+        <a class="navbar-brand" href="index.html">Dino Memo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-success" type="button">
+              <a class="nav-link active" aria-current="page" href="index.html">New Game</a>
+            </button>
+            <button class="btn btn-outline-success" type="button">
+              <a class="nav-link" href="rules.html">Rules</a>
+            </button>
+            <button class="btn btn-outline-success" type="button">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </button>
+          </form>
         </div>
-      </nav>
-      <header>
-        <h1>Level Two</h1>
-      </header>
+      </div>
+    </nav>
+    <header>
+      <h1>Level Two</h1>
+    </header>
+        <!--Timer-->
       <div class="time-area">
         <div id="stopwatch">
           <div id="watch-time">00:00:00</div>
           <div class="button-area">
-          <input type="button" value="Start" id="watch-start" disabled>
-          <input type="button" value="Reset" id="watch-reset" disabled>
+            <input type="button" value="Reset" id="watch-reset" onclick="location.reload()" disabled>
+          </div>
         </div>
-        </div>
-      </div>       
+      </div>
     <div class="game-area" id="game">
       <div class="col cardWrap" data-dino="dino8">
         <img class="card-back" src="assets/images/Dinoback.png" alt="Dinohead">
@@ -122,6 +122,25 @@
       </div>
     </div>
     </div>
+    <!-- Modal -->
+<div id="popup1" class="overlay">
+  <div class="popup">
+      <h2>Congratulations<img src="assets/images/fire.png" id="firew"></h2>  
+      <div class="content-1">
+          Well played! You matched all the cards!
+      </div>
+      <div id="showTime" class="content-2">
+        Your time was:
+      </div>
+      <div class="button-container">
+        <button id="play-again"onclick="location.reload()">Play again?</button>
+        <button id="play-again">
+          <a href="index.html">Change Level </a>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
     <!--Own scriptfile-->
     <script src="assets/js/script.js"></script>
     <!--Bootstrap-->

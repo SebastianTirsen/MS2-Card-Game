@@ -46,15 +46,16 @@
       <header>
         <h1>Level Three</h1>
       </header>
+      <!--Timer-->
       <div class="time-area">
         <div id="stopwatch">
           <div id="watch-time">00:00:00</div>
           <div class="button-area">
-          <input type="button" value="Start" id="watch-start" disabled>
-          <input type="button" value="Reset" id="watch-reset" disabled>
+            <input type="button" value="Reset" id="watch-reset" onclick="location.reload()" disabled>
+          </div>
         </div>
-        </div>
-      </div>  
+      </div>
+      <!--Game area-->   
     <div class="game-area-three" id="game">
       <div class="col cardWrap" data-dino="dino8">
         <img class="card-back" src="assets/images/Dinoback.png" alt="Dinohead">
@@ -138,6 +139,25 @@
       </div>
     </div>
     </div>
+    <!-- Modal -->
+<div id="popup1" class="overlay">
+  <div class="popup">
+      <h2>Congratulations<img src="assets/images/fire.png" id="firew"></h2>  
+      <div class="content-1">
+          Well played! You matched all the cards!
+      </div>
+      <div id="showTime" class="content-2">
+        Your time was:
+      </div>
+      <div class="button-container">
+        <button id="play-again"onclick="location.reload()">Play again?</button>
+        <button id="play-again">
+          <a href="index.html">Change Level </a>
+        </button>
+      </div>
+  </div>
+</div>
+</div>
     <!--Own scriptfile-->
     <script src="assets/js/script.js"></script>
     <!--Bootstrap-->
