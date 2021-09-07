@@ -197,14 +197,23 @@ div.col > img {
 /*****Footer*****/
 
 .fot-contact {
-    margin: 4% 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .fot-rules {
-    margin: 18% 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .fot-index {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer-container {
@@ -213,10 +222,7 @@ div.col > img {
     display: flex;
     justify-content: space-between;
     padding-top: 16px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
 }
 
 .footer-container i {
