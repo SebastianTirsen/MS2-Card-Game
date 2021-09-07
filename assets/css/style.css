@@ -8,7 +8,7 @@ body {
 }
 
 .navbar {
-    width: 100vw;
+    width: 100%;
 }
 header {
     text-align: center;
@@ -47,9 +47,12 @@ div.col > img {
     width: 130px;
     background-color: orange;
     border: 2px solid white;
-    /* margin-top: 20px; */
     border-radius: 5px;
     box-shadow: 5px 2px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-success {
+    margin: 5px;
 }
 
 /*****Form*****/
@@ -99,14 +102,6 @@ div.col > img {
     perspective: 1000px;  
 }
 
-/* .game-area .card. {
-	transform: rotateY(0);
-	background: #02b3e4;
-	cursor: default;
-	animation-name: flipInY;
-	animation-duration: .75s;
-} */
-
 .cardWrap {
     margin: 5px;
     position: relative;
@@ -155,6 +150,9 @@ div.col > img {
     color: white;
     text-decoration: none;
 }
+
+/*****Timer*****/
+
 .time-area {
     text-align: center;
     margin-top: 30px;
@@ -170,8 +168,6 @@ div.col > img {
 .nav-link {
     color: rgba(0,0,0,.9)
 }
-
-/*****Timer*****/
 
 #watch-time {
     font-size: 2.2rem;
@@ -208,7 +204,7 @@ div.col > img {
     margin: 18% 0 auto;
 }
 .fot-index {
-    margin: 13% 0 auto;
+    position: relative;
 }
 
 .footer-container {
@@ -217,6 +213,10 @@ div.col > img {
     display: flex;
     justify-content: space-between;
     padding-top: 16px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer-container i {
@@ -342,4 +342,10 @@ text-align: right;
 #play-again > a {
     text-decoration: none;
     color: white;
+}
+
+/*****Rules Area*****/
+
+.rules-area {
+    margin-top: 150px;
 }

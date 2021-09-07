@@ -5,8 +5,8 @@ när man klickar på spela igen så vänds alla korten tillbaka och shufflas.
 och klockan nollställs.
 
 Övrigt
+Ta bort flashande modal när man trycker på önskad level på indexsidan.
 Lägga footern längst ner, samma på alla sidor.
-Lägga till funktionalitet på level 2 och 3.
-Trycka ner regeltexten längre ner på sidan.
-Addera anpassning till platta och mobil storlek.
+Addera anpassning till platta och mobil storlek. Mindre kort, eller lägga efter varandra, eller ta bort levels, eller annan idé.
+Behöver input type button vara med i Timern?
 
