@@ -1,22 +1,28 @@
 "use strict"; 
+
 /*****Timer*****/
-  // Declares and initiates variables
+
+// Declares and initiates variables
 let firstCard = 0;
 let finalTime = 0;
-//Declares object
+
+// Declares object
 let watch = {
-    clocktime: null, 
+    clocktime: null, // Declares and initiates variables
     clockreset: null, 
     clockstart: null,
   
-    //Starts the timer 
+    // Declares init function
     init: function () {
-      watch.clocktime = document.getElementById("watch-time");
+      watch.clocktime = document.getElementById("watch-time"); // Gets DOM elements
       watch.clockreset = document.getElementById("watch-reset");
     },
-  
+    
+    // Declares and initiates variables
     timer: null, 
-    now: 0, 
+    now: 0,
+
+    // Declares function tick, that updates the clock
     tick: function () {
   
       watch.now++;
@@ -33,27 +39,33 @@ let watch = {
       watch.clocktime.innerHTML = mins + ":" + secs + ":" + hundreds;
     },
     
+    // Function that sets the interval and starts the timer
     start: function () {
       watch.timer = setInterval(watch.tick, 10);
-      watch.clockreset.removeEventListener("click", watch.start);
-      watch.clockreset.addEventListener("click", watch.stop);
+      //watch.clockreset.removeEventListener("click", watch.start);
+      //watch.clockreset.addEventListener("click", watch.stop);
     },
-  
+
+    // Function that clears the interval and stops the timer
     stop: function () {
       clearInterval(watch.timer);
       watch.timer = null;
       watch.clockreset.removeEventListener("click", watch.stop);
     },
-  
+    
+    // Funtion that resets the timer
     reset: function () {
       if (watch.timer != null) { watch.stop(); }
       watch.now = -1;
       watch.tick();
     }
   };
+
+  // Gets variables from DOM when windows reloads
   window.addEventListener("load", watch.init);
   
   /*****Game Area*****/
+
   // Declares and initiates variables
   let newImg = false;
   let freezeImg = false;
@@ -67,7 +79,7 @@ let watch = {
   const $$ = document.querySelectorAll.bind(document);
   let level = document.getElementsByClassName('cardWrap').length / 2;
   
-  // Shuffles cards / images every round
+  // IIFE function that shuffles the cards every round 
   (() => {
       $$(".cardWrap").forEach(img => {
         let mixedImages = Math.floor(Math.random() * 16);
@@ -112,7 +124,7 @@ let watch = {
       watch.start();
     }
     if ( freezeImg || this === imgOne ){ // If this sentence is true, ie that freezeImg === true, you have to wait before clicking the next card
-      return; // Prevents the eventlistener from dropping out when it was not possible to click two times fast on the same card
+      return; 
     }
   
     this.classList.add("changeImg"); // Changes class to ChangeImg, that turns the cards
@@ -120,7 +132,6 @@ let watch = {
     if (!newImg) { // If newImg is false / not true - the card is the first to be clicked of the two, and makes a pair 
       newImg = true; // and then the variables are set - so that this if-statement does not execute when the next card is clicked
       imgOne = this;
-      // console.log(this);
       return; // and you exit the loop
     }
     imgTwo = this; // Invokes when you click the second card
