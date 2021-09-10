@@ -42,8 +42,6 @@ let watch = {
     // Function that sets the interval and starts the timer
     start: function () {
       watch.timer = setInterval(watch.tick, 10);
-      //watch.clockreset.removeEventListener("click", watch.start);
-      //watch.clockreset.addEventListener("click", watch.stop);
     },
 
     // Function that clears the interval and stops the timer
