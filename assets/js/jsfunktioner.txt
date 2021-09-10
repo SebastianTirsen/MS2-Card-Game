@@ -1,5 +1,0 @@
-
-Övrigt
-Ta bort flashande modal när man trycker på önskad level på indexsidan.
-Addera anpassning till platta och mobil storlek. Mindre kort, eller lägga efter varandra, eller ta bort levels, eller annan idé.
-
