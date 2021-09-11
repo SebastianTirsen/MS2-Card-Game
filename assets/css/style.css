@@ -359,6 +359,9 @@ text-align: right;
     .signup-form {
         width: 40%;
     }
+    #play-again {
+        width: 40%;
+    }
 }
 @media only screen and (max-width:908px) {
     ol {
@@ -433,7 +436,15 @@ text-align: right;
         flex-wrap: wrap;
         perspective: 1000px;  
     }
-    .game-area-two, .game-area-three {
+    .game-area-two {
+        width: 360px;
+        height: 360px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        perspective: 1000px;  
+    }
+    .game-area-three {
         width: 360px;
         height: 360px;
         margin: auto;
