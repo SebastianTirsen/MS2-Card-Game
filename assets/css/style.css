@@ -79,7 +79,7 @@ div.col > img {
 
 /*****Game Area*****/
 
-.game-area {
+.game-area-two {
     width: 560px;
     height: 560px;
     margin: auto;
@@ -325,16 +325,13 @@ text-align: right;
 	opacity: 100 !important;
 }
 
-#starRating li {
-	display: inline-block;
-}
-
 #play-again {
 	background-color:orange;
 	padding: 0.7rem 1rem;
 	font-size: 1.1rem;
 	display: block;
 	margin: 0 auto;
+    margin-top: 5px;
 	width: 30%;
 	font-family: 'Quicksand', sans-serif;
 	color: white;
@@ -358,6 +355,11 @@ text-align: right;
 
 /*****Media queries*****/
 
+@media only screen and (max-width:1024px) {
+    .signup-form {
+        width: 40%;
+    }
+}
 @media only screen and (max-width:908px) {
     ol {
         margin: 40px 20%;
@@ -374,11 +376,17 @@ text-align: right;
         width: 23%;
     }
 }
+@media only screen and (max-width:615px) {
+    .popup {
+        width: 68%;
+        margin-top: 40px;
+    }
+    .popup > h2 {
+        margin-top: 0;
+    }
+}
 
 @media only screen and (max-width:543px) {
-    .main-container {
-        width: 107%;
-    }
     ol {
         margin: 40px 0%;
     }
@@ -390,9 +398,6 @@ text-align: right;
     }
 }
 @media only screen and (max-width:435px) {
-    .main-container {
-        width: 107%;
-    }
     ol {
         margin: 40px 0%;
     }
@@ -402,9 +407,53 @@ text-align: right;
     header {
         margin: 3px;
     }
+    .signup-form {
+        width: 70%;
+    }
+    textarea.form-control {
+        height: 200px;
+    }
 }
-@media only screen and (max-width:375px) {
+@media only screen and (max-width:414px) {
     .footer-container {
         display: none;
+    }
+    .popup {
+        width: 86%;
+        margin-top: 5px;
+        padding: 5px;
+
+}
+
+@media only screen and (max-width: 540px) {
+    .game-area-one {
+        width: 280px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        perspective: 1000px;  
+    }
+    .game-area-two, .game-area-three {
+        width: 360px;
+        height: 360px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        perspective: 1000px;  
+    }
+    div.col > img {
+        height: 80px;
+        width: 80px;
+        background-color: orange;
+        border: 2px solid white;
+        / margin-top: 20px; /
+        border-radius: 5px;
+        box-shadow: 5px 2px 20px 0 rgba(255, 255, 255, 0.5);
+    }
+    .card-back {
+        padding: 10px;
+    }
+    .card-front {
+        padding: 14px;
     }
 }
