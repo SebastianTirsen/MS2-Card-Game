@@ -1,5 +1,3 @@
-"use strict"; 
-
 /*****Timer*****/
 
 // Declares and initiates variable
@@ -98,9 +96,9 @@ let watch = {
         watch.stop();
         document.getElementById("showTime").appendChild(watch.clocktime);
         modal.classList.add("show");
-      };
+      }
       reAssignVariables();
-  }
+  };
   
   // Function that turns the cards back again if they dont match
   const hideImages = () => {
@@ -119,6 +117,7 @@ let watch = {
     firstCard += 1;
     if (firstCard === 1) {
       watch.start();
+      document.getElementById("start-text").style.display = "none"; 
     }
     if ( freezeImg || this === imgOne ){ // If this sentence is true, ie that freezeImg === true, you have to wait before clicking the next card
       return; 

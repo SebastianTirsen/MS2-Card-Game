@@ -260,6 +260,10 @@ text-align: right;
     margin-right: 40px;
 }
 
+#start-text {
+    text-align: center;
+}
+
 /*****Modal*****/
 
 .overlay {
