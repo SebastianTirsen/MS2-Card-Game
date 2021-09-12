@@ -10,7 +10,7 @@ function sendMail(contactForm) {
         },
         function(error) {
         },
-    )
+    );
     return false;
 }
 

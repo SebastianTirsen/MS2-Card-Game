@@ -322,10 +322,23 @@ text-align: right;
 
 .show {
 	visibility: visible !important;
-	opacity: 100 !important;
+	opacity: 1 !important;
 }
 
 #play-again {
+	background-color:orange;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+    margin-top: 5px;
+	width: 30%;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	border-radius: 5px;
+}
+
+#play-level {
 	background-color:orange;
 	padding: 0.7rem 1rem;
 	font-size: 1.1rem;
@@ -457,7 +470,7 @@ text-align: right;
         width: 80px;
         background-color: orange;
         border: 2px solid white;
-        / margin-top: 20px; /
+        margin-top: 20px;
         border-radius: 5px;
         box-shadow: 5px 2px 20px 0 rgba(255, 255, 255, 0.5);
     }
@@ -467,4 +480,5 @@ text-align: right;
     .card-front {
         padding: 14px;
     }
+}
 }

@@ -2,9 +2,8 @@
 
 /*****Timer*****/
 
-// Declares and initiates variables
+// Declares and initiates variable
 let firstCard = 0;
-let finalTime = 0;
 
 // Declares object
 let watch = {
@@ -71,7 +70,7 @@ let watch = {
   let imgTwo = null;
   let gameOver = 0;
   let imageArray = [];
-  let modal = document.getElementById("popup1")
+  let modal = document.getElementById("popup1");
   
   // Gets cards / image objects from the DOM
   const $$ = document.querySelectorAll.bind(document);
@@ -99,7 +98,7 @@ let watch = {
         watch.stop();
         document.getElementById("showTime").appendChild(watch.clocktime);
         modal.classList.add("show");
-      }
+      };
       reAssignVariables();
   }
   
@@ -110,7 +109,7 @@ let watch = {
         imageArray.forEach(img => img.classList.remove("changeImg"));
         reAssignVariables();
       }, 1000); // how long the cards front side is showing before turning back again
-  }
+  };
   
   // Chooses new function from stated data-* attribute in index.html (data-dino="dino8") // if both are for example dino8 they make a pair
   const compareImages = () => imgOne.dataset.dino === imgTwo.dataset.dino ? freezeImages() : hideImages();
