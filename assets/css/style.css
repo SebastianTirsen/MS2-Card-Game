@@ -463,7 +463,7 @@ text-align: right;
     }
     .game-area-three {
         width: 360px;
-        height: 360px;
+        height: 445px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -474,7 +474,7 @@ text-align: right;
         width: 80px;
         background-color: orange;
         border: 2px solid white;
-        margin-top: 20px;
+        /*margin-top: 20px;*/
         border-radius: 5px;
         box-shadow: 5px 2px 20px 0 rgba(255, 255, 255, 0.5);
     }
