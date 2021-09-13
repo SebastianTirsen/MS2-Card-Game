@@ -377,7 +377,10 @@ text-align: right;
         width: 40%;
     }
     #play-again {
-        width: 40%;
+        width: 43%;
+    }
+    #play-level {
+        width: 43%;
     }
 }
 @media only screen and (max-width:908px) {

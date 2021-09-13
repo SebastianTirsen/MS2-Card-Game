@@ -1,12 +1,14 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Din Memo logo](/workspace/MS2-Card-Game/assets/images/logo.png) Dino Memo
 
-Welcome Sebastian Tirsén,
+Welcome players and aspiring Memory-masters, to Dino Memo!
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+This is probably the the number one Memory game in the world! If you just like to play Memo or you have high ambitions in training your bodys most important muscle(your brain) you have come to the right place. If you in addition also like Dinosaurs, you are in for a treat! This memory-dinosaur-adventure has three levels of intense braintraning and fun when you try to match the different Dinosaurs. You can compete with yourself to finish the game faster than last time, or compete wuth a friend and showing off your memory-skills. If you are a first time player, visit the Rules-page and learn more. If you have further questions, dont hesistate to contact me via the contact-page. Happy playing and good luck!
 
-## Gitpod Reminders
+View live project here:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[MS-Card Game]
+
+User experience (UX)
 
 `python3 -m http.server`
 
