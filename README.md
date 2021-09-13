@@ -1,6 +1,6 @@
 #
 
-![Din Memo logo](/workspace/MS2-Card-Game/assets/images/logo.png) **Dino Memo**
+![Dino Memo logo](https://github.com/SebastianTirsen/MS2-Card-Game/blob/main/assets/images/logo.png) **Dino Memo**
 
 **Welcome players and aspiring Memory-masters, to Dino Memo!**
 
