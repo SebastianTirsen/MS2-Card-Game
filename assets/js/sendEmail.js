@@ -7,8 +7,10 @@ function sendMail(contactForm) {
     .then(
         function(response) {
             document.getElementById('signup').reset();
+            alert('Mail sent successfully!');
         },
         function(error) {
+            alert('Failed to send mail!');
         },
     );
     return false;
