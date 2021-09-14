@@ -69,7 +69,7 @@ https://www.deviantart.com/hanabell1/art/Fireworks-with-Stars-PNG-398935289
 
 One initial wireframe was done in Adobe XD. After that no further work with the Wireframe was done. The reason was the simplicity of the idea and also the lack of time.  
 
-First Page Wireframe - [View]("https://github.com/SebastianTirsen/MS2-Card-Game/blob/main/assets/images/wire-first.png")
+First Page Wireframe - [View]("https://github.com/SebastianTirsen/MS2-Card-Game/blob/0c69cdb4a4c20590588240b081b99ebe031e416f/assets/images/wire-first.png")
 
 Rules Page Wireframe - View
 
