@@ -1,5 +1,5 @@
 #
-<img src="https://github.com/SebastianTirsen/MS2-Card-Game/blob/main/assets/images/logo.png" width="150" height="150" /> # **Dino Memo**
+<img src="https://github.com/SebastianTirsen/MS2-Card-Game/blob/main/assets/images/logo.png" width="150" height="150" />  **Dino Memo**
 # Welcome players and aspiring Memory-masters, to Dino Memo!
 
 
