@@ -7,7 +7,7 @@ This is probably the the number one Memory game in the world! If you just like t
 
 Full live project experience here:
 
-[MS-Card Game]
+[Dino Memo](https://sebastiantirsen.github.io/MS2-Card-Game/)
 
 # User experience (UX)
 
