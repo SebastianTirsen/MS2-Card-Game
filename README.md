@@ -166,6 +166,7 @@ JSHint: No errors. 31 warnings in file script.js. Example: 'let' is available in
 
 2. As a frequent player you want to be able to easily get in contact with the creators of the game to ask questions and to give suggestions on how to improve the game.
   * The contact page is easily accessible and gives the player a direct link for communicating questions, requests and suggestions to the creators of the game. The player simply states their full name, email and writes a comment in the textfield. When pressing the send-button the player gets feedback that the mail is sent  by the send-button changing text to "Message sent".
+  * The footer on the first page, rules page and contact page includes contact information to the creators and links to social media for getting in contact. 
 
 3. As a frequent player you want to be able to request to the creators to increase the difficulty, for example by decreasing the time the cards are showing their front side before flipping back over.
   * The contact page is easily accessible and gives the player a direct link for communicating questions, requests and suggestions to the creators of the game.
@@ -184,7 +185,14 @@ My family members were asked to review the site and play the game to point out a
 
 ## Performance
 
-Lighthouse:
+The site performance was tested using Lighthouse in the developer tool in Chrome.
+
+The performance for mobile use was scored as: Performance 99 Accessibility 95 Best Practices 100 SEO 92
+
+The performance for desktop use was scored as:
+
+Performance 97 Accessibility 92 Best Practices 100 SEO 90
+
 
 # Bugs & fixes
 
