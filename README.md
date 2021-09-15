@@ -289,7 +289,7 @@ https://getbootstrap.com/docs/4.0/components/buttons/
 
 # Acknowledgements
 
-* My longtime friend and mentor Ivan Söderlund, for all your invaluable support.
+* My longtime friend and mentor Ivan Persson, for all your invaluable support.
 
 * My mentor Gerry McBride for your good advice.
 
